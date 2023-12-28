@@ -8,7 +8,7 @@ import { Pruebas } from './Pruebas'
 import { PruebasDiPruebas } from './PruebasDiPruebas'
 
 
-
+// practicas de un dia 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     {/* <PrimerComponente titulo='Enviando desde el padre' sumando={3}/> */}
