@@ -11,10 +11,7 @@ import { PruebasDiPruebas } from './PruebasDiPruebas'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <PrimerComponente titulo='Enviando desde el padre' sumando={3}/> */}
-    {/* <Contador value={0}/> */}
-    <ListadoApp/>
-    {/* <Pruebas/> */}
+    <Pruebas/>
     {/* <PruebasDiPruebas valor={0}/> */}
   </React.StrictMode>
 )

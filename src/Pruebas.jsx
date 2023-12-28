@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AgregarTareasW } from "./components/AgregarTareasW";
 
 const Items =({nombre,comprado})=>{
   return(
@@ -25,6 +26,7 @@ export const Pruebas = () => {
 
   return (
   <>
+  <AgregarTareasW></AgregarTareasW>
   <ol>
     {
       arreglo.map(producto =><Items key={producto.nombre} nombre={producto.nombre} comprado={producto.comprado}></Items>)
