@@ -8,7 +8,7 @@ import { Pruebas } from './Pruebas'
 import { PruebasDiPruebas } from './PruebasDiPruebas'
 
 
-
+// Practicas de una semana
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Pruebas/>
