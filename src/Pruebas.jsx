@@ -9,10 +9,6 @@ const Items =({nombre,comprado})=>{
 
 export const Pruebas = () => {
 
-  const agregando =()=>{
-    setarreglo([...arreglo,{nombre:'Nuevo producto',comprado:false}])
-  }
-
   let listaCompras =[
     {nombre:"Azucar",comprado:true},
     {nombre:"Papas",comprado:true},
@@ -26,13 +22,12 @@ export const Pruebas = () => {
 
   return (
   <>
-  <AgregarTareasW></AgregarTareasW>
+  <AgregarTareasW productinio={setarreglo}></AgregarTareasW>
   <ol>
     {
       arreglo.map(producto =><Items key={producto.nombre} nombre={producto.nombre} comprado={producto.comprado}></Items>)
     }
   </ol>
-  <button className=" p-6 font-bold bg-slate-400 rounded-full" onClick={agregando}>Agregar</button>
   </>
   )
 };

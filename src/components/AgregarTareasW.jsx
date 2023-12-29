@@ -1,14 +1,20 @@
 import { useState } from "react";
 
-export const AgregarTareasW = () => {
+export const AgregarTareasW = ({productinio}) => {
   const [tarein, settarein] = useState("");
+
   const onInputchange = (event) => {
     settarein(event.target.value);
   };
 
   const onsubmit =(escuhando)=>{
     escuhando.preventDefault()
-    console.log(tarein)
+    let producto ={
+      nombre:tarein,
+      comprado:false
+    }
+    productinio(producte =>[...producte,producto])
+
     settarein("")
   }
   return (
