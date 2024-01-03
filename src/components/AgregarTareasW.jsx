@@ -9,11 +9,7 @@ export const AgregarTareasW = ({productinio}) => {
 
   const onsubmit =(escuhando)=>{
     escuhando.preventDefault()
-    let producto ={
-      nombre:tarein,
-      comprado:false
-    }
-    productinio(producte =>[...producte,producto])
+    productinio(tarein)
 
     settarein("")
   }
