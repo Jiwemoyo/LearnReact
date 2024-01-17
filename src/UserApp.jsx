@@ -1,22 +1,37 @@
-import { useState, useEffect } from "react";
-import { UserList } from "./components/userList";
+import React from 'react'
+import { useState , useEffect} from 'react'
 
 export const UserApp = () => {
 
-    const [enpoint, setEnpoint] = useState('users')
-  const mostrarTodo = () => {
-    setEnpoint('comments')
-  };
+  const Lu =({nombre})=>{
+    return <li className=' font-bold text-5xl text-yellow-100 py-4'>{nombre}</li>
+  }
 
+
+  const [User, setUser] = useState([])
+
+  const userFetch = async()=>{
+    try {
+      const response = await fetch('https://jsonplaceholder.typicode.com/users')
+      const data = await response.json()
+      setUser(data)
+
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  useEffect(() => { 
+    userFetch()
+  }, [])
+  
 
   return (
-    <div className=" font-bold text-3xl text-white">
-      <h1 className=" text-white font-bold text-5xl">Lista de usuarios</h1>
-      <UserList endpoint={enpoint}></UserList>
-
-      <button className=" bg-slate-500" onClick={mostrarTodo}>
-        Mostrar usarios
-      </button>
-    </div>
-  );
-};
+    <>
+    <h1 className='font-bold text-7xl text-white'>Lista de Usuarios</h1>
+    <ul>
+      {User.map(usuario =><Lu key={usuario.id}nombre={usuario.name}/>)}
+    </ul>
+    </>
+  )
+}
